@@ -93,9 +93,25 @@
     border-left: none;
     padding-left: 0;
     margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .service-block h3 .icon {
+    font-size: 28px;
+    line-height: 1;
   }
   .service-block p:last-child {
     margin-bottom: 0;
+  }
+  /* Footer */
+  footer {
+    text-align: center;
+    color: #888;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    font-size: 13px;
   }
 
   /* ===== Tabletti ===== */
@@ -176,16 +192,20 @@
       <h2>Palvelut</h2>
 
       <div class="service-block">
-        <h3>Ilmalämpöpumput</h3>
-        <p>Tarjoamme ilmalämpöpumppujen myyntiä, asennusta ja huoltoa kotitalouksille sekä yrityksille. Valikoimasta löytyvät laadukkaat Toshiba ja Panasonic-ilmalämpöpumput, jotka sopivat sekä lämmitykseen että viilennykseen.</p>
-        <p>Huollamme ilmalämpöpumppuja merkistä riippumatta. Säännöllinen huolto parantaa laitteen toimintavarmuutta, pidentää käyttöikää ja auttaa pitämään energiankulutuksen kurissa.</p>
+        <h3><span class="icon">❄</span> Ilmalämpöpumput</h3>
+        <p>Ilmalämpöpumppujen myynti, asennus ja huolto. Valikoimasta löytyvät laadukkaat Toshiba ja Panasonic ilmalämpöpumput.</p>
+        <p>Huoltotoimenpiteet onnistuvat merkistä riippumatta.</p>
       </div>
 
       <div class="service-block">
-        <h3>Sähköasennukset</h3>
-        <p>Sähkötekniikka Näkki Oy tarjoaa sähköasennusta kotitalouksille ja yrityksille Iitin ja Kouvolan alueella.</p>
+        <h3><span class="icon">⚡</span> Sähköasennukset</h3>
+        <p>Sähköasennukset kotitalouksille, yrityksille ja taloyhtiöille. Iitin ja Kouvolan alueella.</p>
       </div>
     </div>
+
+    <footer>
+      © Sähkötekniikka Näkki Oy
+    </footer>
   </div>
 </body>
 </html>
