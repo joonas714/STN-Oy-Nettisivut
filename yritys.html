@@ -124,6 +124,54 @@
     font-weight: bold;
     color: #0e1f4d;
   }
+  /* Hero-kuva yritys-sivulla (sama tyyli kuin etusivulla) */
+  .hero {
+    position: relative;
+    margin-top: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  }
+  .hero img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    display: block;
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(14,31,77,0.85) 0%, rgba(14,31,77,0.55) 60%, rgba(14,31,77,0.2) 100%);
+    display: flex;
+    align-items: center;
+    padding: 40px 60px;
+  }
+  .hero-text h1 {
+    color: #fff;
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    max-width: 600px;
+  }
+  .hero-text p {
+    color: #f0f0f0;
+    font-size: 18px;
+    max-width: 600px;
+    margin-bottom: 10px;
+  }
+  .hero-text p:last-child {
+    margin-bottom: 0;
+  }
+  @media (max-width: 768px) {
+    .hero img { height: 300px; }
+    .hero-overlay { padding: 25px 30px; }
+  }
+  @media (max-width: 480px) {
+    .hero img { height: 260px; }
+    .hero-overlay { padding: 20px; }
+    .hero-text h1 { font-size: 24px; }
+    .hero-text p { font-size: 14px; }
+  }
   /* Footer */
   footer {
     text-align: center;
@@ -209,22 +257,28 @@
       </ul>
     </nav>
 
+    <!-- Hero -->
+    <div class="hero">
+      <img src="autokuva.jpeg" alt="Joonas Näkki yrityksen pakettiauton edessä">
+      <div class="hero-overlay">
+        <div class="hero-text">
+          <h1>Yritys</h1>
+          <p>Sähkötekniikka Näkki Oy on Iittiläinen sähköalan yritys, joka sai alkunsa kiinnostuksesta sähköalaa ja yrittäjyyttä kohtaan.</p>
+          <p>Yrittäjä Joonas Näkki.</p>
+        </div>
+      </div>
+    </div>
+
     <!-- Content -->
     <div class="main">
-      <h2>Yritys</h2>
-
-      <div class="info-block">
-        <p>Sähkötekniikka Näkki Oy on Iittiläinen sähköalan yritys, joka sai alkunsa kiinnostuksesta sähköalaa ja yrittäjyyttä kohtaan.</p>
-        <p>Yrittäjä <span class="owner">Joonas Näkki</span></p>
-      </div>
-
       <div class="info-block">
         <h3>Pätevyydet</h3>
         <ul class="qualifications">
-          <li>Sähköpätevyys 2</li>
-          <li>Alle 3 kg kylmäainepätevyys</li>
+          <li>Sähköpätevyys 2, Sähkötöidenjohtaja: Joonas Näkki</li>
+          <li>Alle 3 kg kylmäainepätevyys, Vastuuhenkilö: Joonas Näkki</li>
         </ul>
       </div>
+
     </div>
 
     <footer>
