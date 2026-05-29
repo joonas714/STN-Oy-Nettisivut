@@ -161,13 +161,26 @@
   }
   .service-image {
     margin: 15px 0 5px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    align-items: stretch;
   }
   .service-image img {
     width: 100%;
-    height: auto;
+    height: 320px;
+    object-fit: cover;
     border-radius: 8px;
     display: block;
     box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  }
+  @media (max-width: 600px) {
+    .service-image {
+      grid-template-columns: 1fr;
+    }
+    .service-image img {
+      height: 260px;
+    }
   }
   /* Footer */
   footer {
@@ -262,15 +275,16 @@
         <h3><span class="icon">❄</span> Ilmalämpöpumput</h3>
         <p>Ilmalämpöpumppujen myynti, asennus ja huolto. Valikoimasta löytyvät laadukkaat Toshiba ja Panasonic ilmalämpöpumput.</p>
         <div class="price-highlight">Hinnat alkaen: viilentävä ilmalämpöpumppu + perusasennus 1490 €</div>
-        <p>Huoltotoimenpiteet onnistuvat merkistä riippumatta.</p>
+        <p>Huoltotoimenpiteet onnistuvat merkistä riippumatta. Ota yhteyttä ja tilaa huolto ilmalämpöpumpullesi.</p>
 
         <div class="service-image">
           <img src="ilp-talvi.png" alt="Toshiba-ilmalämpöpumput hirsitalon seinällä talvella">
+          <img src="tossu.jpeg" alt="Toshiba Inverter -ilmalämpöpumpun ulkoyksikkö">
         </div>
 
-        <p class="process-title">Näin homma etenee:</p>
+        <p class="process-title">Näin ilmalämpöpumpun hankinta etenee:</p>
         <ol class="process-list">
-          <li>Ota yhteyttä ja kysy ilmainen kartoituskäynti.</li>
+          <li>Ota yhteyttä ja sovitaan ilmainen kartoituskäynti.</li>
           <li>Saat kiinteähintaisen tarjouksen.</li>
           <li>Jos hyväksyt tarjouksen, ilmalämpöpumppu tilataan, toimitetaan ja asennetaan sovittuna asennusajankohtana.</li>
         </ol>
@@ -278,7 +292,7 @@
 
       <div class="service-block">
         <h3><span class="icon">⚡</span> Sähköasennukset</h3>
-        <p>Sähköasennukset kotitalouksille, yrityksille ja taloyhtiöille. Iitin ja Kouvolan alueella.</p>
+        <p>Sähköasennukset kotitalouksille, yrityksille ja taloyhtiöille. N. 80 km säteellä Kausalasta.</p>
         <p>Kaikki kodin sähkötyöt monipuolisesti. Muun muassa: pistorasiat, valaistus, kiukaat, liedet ja palovaroittimet.</p>
       </div>
     </div>
