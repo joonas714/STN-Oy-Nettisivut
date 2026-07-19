@@ -174,6 +174,28 @@
     display: block;
     box-shadow: 0 3px 10px rgba(0,0,0,0.15);
   }
+  /* Ota yhteyttä -nappi */
+  .contact-cta {
+    text-align: center;
+    margin: 40px 0 30px 0;
+  }
+  .contact-cta a {
+    display: inline-block;
+    padding: 14px 36px;
+    background: #ffcc00;
+    color: #0e1f4d;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 6px;
+    letter-spacing: 1px;
+    transition: transform 0.15s, background 0.2s;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  }
+  .contact-cta a:hover {
+    background: #ffd633;
+    transform: translateY(-2px);
+  }
   @media (max-width: 600px) {
     .service-image {
       grid-template-columns: 1fr;
@@ -192,6 +214,51 @@
     font-size: 14px;
     border-radius: 8px;
     line-height: 1.8;
+  }
+
+  /* ===== TUMMA TEEMA ===== */
+  body {
+    background: #0f1419;
+    color: #d4d4d4;
+  }
+  .container {
+    background: #1a1f2e;
+  }
+  .banner {
+    background: #fff;
+    border-radius: 10px;
+  }
+  .main h2 {
+    color: #6ba3ff;
+  }
+  .main h3 {
+    color: #6ba3ff;
+    border-left-color: #6ba3ff;
+  }
+  .main p {
+    color: #c0c7d5;
+  }
+  .service-block {
+    background: #242a3a;
+    border-left-color: #6ba3ff;
+  }
+  .service-block h3 {
+    color: #6ba3ff;
+  }
+  .price-highlight {
+    background: #3a2f0a;
+    border-color: #a88900;
+    color: #ffe680;
+  }
+  .process-title {
+    color: #6ba3ff;
+  }
+  .process-list li {
+    color: #c0c7d5;
+    border-bottom-color: #2d3548;
+  }
+  .service-image img {
+    box-shadow: 0 3px 10px rgba(0,0,0,0.4);
   }
 
   /* ===== Tabletti ===== */
@@ -273,18 +340,12 @@
 
       <div class="service-block">
         <h3><span class="icon">❄</span> Ilmalämpöpumput</h3>
-        <p>Ilmalämpöpumppujen myynti, asennus ja huolto. Valikoimasta löytyvät laadukkaat Toshiba ja Panasonic ilmalämpöpumput.</p>
-        <div class="price-highlight">Hinnat alkaen: viilentävä ilmalämpöpumppu + perusasennus 1490 €</div>
-        <p>Huoltotoimenpiteet onnistuvat merkistä riippumatta. Ota yhteyttä ja tilaa huolto ilmalämpöpumpullesi.</p>
-
-        <div class="service-image">
-          <img src="ilp-talvi.png" alt="Toshiba-ilmalämpöpumput hirsitalon seinällä talvella">
-          <img src="tossu.jpeg" alt="Toshiba Inverter -ilmalämpöpumpun ulkoyksikkö">
-        </div>
+        <p>Ilmalämpöpumppujen myynti & asennus avaimet käteen -periaatteella. Valikoimasta löytyvät tunnetut merkit Toshiba ja Panasonic.</p>
+        <p>Huoltotoimenpiteet onnistuvat merkistä riippumatta.</p>
 
         <p class="process-title">Näin ilmalämpöpumpun hankinta etenee:</p>
         <ol class="process-list">
-          <li>Ota yhteyttä ja sovitaan ilmainen kartoituskäynti.</li>
+          <li>Ota yhteyttä ja sovitaan tarvittaessa ilmainen kartoituskäynti.</li>
           <li>Saat kiinteähintaisen tarjouksen.</li>
           <li>Jos hyväksyt tarjouksen, ilmalämpöpumppu tilataan, toimitetaan ja asennetaan sovittuna asennusajankohtana.</li>
         </ol>
@@ -293,7 +354,11 @@
       <div class="service-block">
         <h3><span class="icon">⚡</span> Sähköasennukset</h3>
         <p>Sähköasennukset kotitalouksille, yrityksille ja taloyhtiöille. N. 80 km säteellä Kausalasta.</p>
-        <p>Kaikki kodin sähkötyöt monipuolisesti. Muun muassa: pistorasiat, valaistus, kiukaat, liedet ja palovaroittimet.</p>
+        <p>Kaikki kodin sähkötyöt monipuolisesti. Muun muassa: pistorasiat, valaistus, kiukaat, liedet, sähköautonlatausasemat ja palovaroittimet.</p>
+      </div>
+
+      <div class="contact-cta">
+        <a href="yhteystiedot.html">Ota yhteyttä</a>
       </div>
     </div>
 

@@ -106,6 +106,33 @@
   .contact-row a:hover {
     text-decoration: underline;
   }
+  /* Kopioi-nappi */
+  .contact-row .contact-value {
+    flex: 1;
+  }
+  .copy-btn {
+    background: #1f5fbf;
+    color: #fff;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: background 0.2s, transform 0.1s;
+    margin-left: 10px;
+    white-space: nowrap;
+  }
+  .copy-btn:hover {
+    background: #174a96;
+  }
+  .copy-btn:active {
+    transform: scale(0.96);
+  }
+  .copy-btn.copied {
+    background: #2e8f3f;
+  }
   /* Luotettava Kumppani -logo */
   .partner-logo {
     margin-top: 30px;
@@ -134,6 +161,40 @@
     font-size: 14px;
     border-radius: 8px;
     line-height: 1.8;
+  }
+
+  /* ===== TUMMA TEEMA ===== */
+  body {
+    background: #0f1419;
+    color: #d4d4d4;
+  }
+  .container {
+    background: #1a1f2e;
+  }
+  .banner {
+    background: #fff;
+    border-radius: 10px;
+  }
+  .main h2 {
+    color: #6ba3ff;
+  }
+  .contact-block {
+    background: #242a3a;
+    border-left-color: #6ba3ff;
+  }
+  .contact-row {
+    color: #d4d4d4;
+    border-bottom-color: #2d3548;
+  }
+  .contact-icon {
+    color: #6ba3ff;
+  }
+  .partner-logo {
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    display: inline-flex;
+    max-width: none;
   }
 
   /* ===== Tabletti ===== */
@@ -216,17 +277,51 @@
       <div class="contact-block">
         <div class="contact-row">
           <span class="contact-icon">👤</span>
-          <span>Joonas Näkki</span>
+          <span class="contact-value">Joonas Näkki</span>
         </div>
         <div class="contact-row">
           <span class="contact-icon">📞</span>
-          <span>044 771 1155</span>
+          <span class="contact-value">044 771 1155</span>
+          <button class="copy-btn" data-copy="044 771 1155">Kopioi</button>
         </div>
         <div class="contact-row">
           <span class="contact-icon">✉</span>
-          <span>sahkotekniikkanakki@gmail.com</span>
+          <span class="contact-value">sahkotekniikkanakki@gmail.com</span>
+          <button class="copy-btn" data-copy="sahkotekniikkanakki@gmail.com">Kopioi</button>
         </div>
       </div>
+
+      <script>
+        document.querySelectorAll('.copy-btn').forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            var text = btn.getAttribute('data-copy');
+            navigator.clipboard.writeText(text).then(function() {
+              var original = btn.textContent;
+              btn.textContent = 'Kopioitu!';
+              btn.classList.add('copied');
+              setTimeout(function() {
+                btn.textContent = original;
+                btn.classList.remove('copied');
+              }, 1500);
+            }).catch(function() {
+              // Fallback vanhoille selaimille
+              var t = document.createElement('textarea');
+              t.value = text;
+              document.body.appendChild(t);
+              t.select();
+              document.execCommand('copy');
+              document.body.removeChild(t);
+              var original = btn.textContent;
+              btn.textContent = 'Kopioitu!';
+              btn.classList.add('copied');
+              setTimeout(function() {
+                btn.textContent = original;
+                btn.classList.remove('copied');
+              }, 1500);
+            });
+          });
+        });
+      </script>
 
       <div class="partner-logo">
         <img src="luotettava-kumppani.png" alt="Luotettava Kumppani">

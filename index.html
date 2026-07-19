@@ -155,6 +155,10 @@
     text-align: center;
     border-top: 4px solid #1f5fbf;
     transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer;
   }
   .service-card:hover {
     transform: translateY(-4px);
@@ -276,6 +280,50 @@
     line-height: 1.8;
   }
 
+  /* ===== TUMMA TEEMA ===== */
+  body {
+    background: #0f1419;
+    color: #d4d4d4;
+  }
+  .container {
+    background: #1a1f2e;
+  }
+  .banner {
+    background: #fff;
+    border-radius: 10px;
+  }
+  .section-title {
+    color: #6ba3ff;
+  }
+  .section-subtitle {
+    color: #a8b0c0;
+  }
+  .service-card {
+    background: #242a3a;
+    border-top-color: #6ba3ff;
+  }
+  .service-card:hover {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+  }
+  .service-card h3 {
+    color: #6ba3ff;
+  }
+  .service-card p {
+    color: #b8bfd0;
+  }
+  .hero {
+    box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+  }
+  .area-image img {
+    box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+  }
+  .area-keywords {
+    color: #5a6070;
+  }
+  .bottom-image img {
+    box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+  }
+
   /* ===== Tabletti ===== */
   @media (max-width: 900px) {
     .services { grid-template-columns: 1fr 1fr; }
@@ -336,7 +384,7 @@
 
     <!-- Hero -->
     <div class="hero">
-      <img src="st1.jpg" alt="Sähköalan ammattilaisen työkaluja">
+      <img src="keskus.png" alt="Sähkökeskus">
       <div class="hero-overlay">
         <div class="hero-text">
           <h1>Sähkötekniikka Näkki Oy</h1>
@@ -350,16 +398,16 @@
     <h2 class="section-title">Palvelut</h2>
     <p class="section-subtitle">Yritys keskittyy sähköasennuksiin sekä ilmalämpöpumppujen myyntiin, asennukseen ja huoltoon.</p>
     <div class="services services-2">
-      <div class="service-card">
+      <a href="palvelut.html" class="service-card">
         <span class="service-icon">⚡</span>
         <h3>Sähköasennukset</h3>
         <p>Sähköasennukset kotitalouksille, yrityksille ja taloyhtiöihin.</p>
-      </div>
-      <div class="service-card">
+      </a>
+      <a href="palvelut.html" class="service-card">
         <span class="service-icon">❄</span>
         <h3>Ilmalämpöpumput</h3>
         <p>Toshiba- ja Panasonic-ilmalämpöpumppujen myynti ja asennus avaimet käteen -periaatteella.</p>
-      </div>
+      </a>
     </div>
 
     <!-- Toimialue-kartta -->
