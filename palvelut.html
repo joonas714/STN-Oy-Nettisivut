@@ -93,6 +93,7 @@
     border-radius: 8px;
     margin-bottom: 20px;
     border-left: 4px solid #1f5fbf;
+    overflow: hidden;
   }
   .service-block h3 {
     border-left: none;
@@ -105,6 +106,22 @@
   .service-block h3 .icon {
     font-size: 28px;
     line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .service-block h3 .icon img {
+    width: 42px;
+    height: 42px;
+    display: block;
+    object-fit: contain;
+  }
+  @media (max-width: 480px) {
+    .service-block h3 .icon img {
+      width: 34px;
+      height: 34px;
+    }
   }
   .service-block p:last-child {
     margin-bottom: 0;
@@ -174,6 +191,58 @@
     display: block;
     box-shadow: 0 3px 10px rgba(0,0,0,0.15);
   }
+  /* Palvelu-hero-kuvat (upotettuna laatikkoon) */
+  .service-hero {
+    position: relative;
+    margin: -20px -25px 20px -25px;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+  }
+  .service-hero img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+  }
+  .service-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(14,31,77,0.85) 0%, rgba(14,31,77,0.55) 55%, rgba(14,31,77,0.15) 100%);
+    display: flex;
+    align-items: center;
+    padding: 25px 40px;
+  }
+  .service-hero-text h3 {
+    color: #fff !important;
+    font-size: 28px !important;
+    line-height: 1.2;
+    margin: 0 0 8px 0 !important;
+    max-width: 500px;
+    border-left: none !important;
+    padding-left: 0 !important;
+    display: block;
+  }
+  .service-hero-text p {
+    color: #f0f0f0;
+    font-size: 15px;
+    max-width: 500px;
+    margin: 0;
+  }
+  @media (max-width: 768px) {
+    .service-hero { margin: -20px -25px 15px -25px; }
+    .service-hero img { height: 180px; }
+    .service-hero-overlay { padding: 18px 25px; }
+    .service-hero-text h3 { font-size: 22px !important; }
+    .service-hero-text p { font-size: 13px; }
+  }
+  @media (max-width: 480px) {
+    .service-hero { margin: -15px -18px 12px -18px; }
+    .service-hero img { height: 140px; }
+    .service-hero-overlay { padding: 12px 15px; }
+    .service-hero-text h3 { font-size: 18px !important; margin-bottom: 4px !important; }
+    .service-hero-text p { font-size: 12px; line-height: 1.35; }
+  }
+
   /* Ota yhteyttä -nappi */
   .contact-cta {
     text-align: center;
@@ -339,7 +408,15 @@
       <h2>Palvelut</h2>
 
       <div class="service-block">
-        <h3><span class="icon">❄</span> Ilmalämpöpumput</h3>
+        <div class="service-hero">
+          <img src="ilp-hero.png" alt="Ilmalämpöpumppu ja huoltotyökaluja">
+          <div class="service-hero-overlay">
+            <div class="service-hero-text">
+              <h3>Ilmalämpöpumput</h3>
+              <p>Myynti, Asennus & Huolto</p>
+            </div>
+          </div>
+        </div>
         <p>Ilmalämpöpumppujen myynti & asennus avaimet käteen -periaatteella. Valikoimasta löytyvät tunnetut merkit Toshiba ja Panasonic.</p>
         <p>Huoltotoimenpiteet onnistuvat merkistä riippumatta.</p>
 
@@ -352,7 +429,15 @@
       </div>
 
       <div class="service-block">
-        <h3><span class="icon">⚡</span> Sähköasennukset</h3>
+        <div class="service-hero">
+          <img src="sahko-hero.png" alt="Vanha sähkökeskus lähikuvassa">
+          <div class="service-hero-overlay">
+            <div class="service-hero-text">
+              <h3>Sähköasennukset</h3>
+              <p>Sähkötyöt kotitalouksille, yrityksille ja taloyhtiöille.</p>
+            </div>
+          </div>
+        </div>
         <p>Sähköasennukset kotitalouksille, yrityksille ja taloyhtiöille. N. 80 km säteellä Kausalasta.</p>
         <p>Kaikki kodin sähkötyöt monipuolisesti. Muun muassa: pistorasiat, valaistus, kiukaat, liedet, sähköautonlatausasemat ja palovaroittimet.</p>
       </div>

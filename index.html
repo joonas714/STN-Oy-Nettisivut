@@ -169,6 +169,19 @@
     margin-bottom: 12px;
     display: block;
   }
+  .service-icon img {
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    object-fit: contain;
+    max-width: 100%;
+  }
+  @media (max-width: 480px) {
+    .service-icon img {
+      width: 64px;
+      height: 64px;
+    }
+  }
   .service-card h3 {
     color: #0e1f4d;
     font-size: 18px;
@@ -399,12 +412,12 @@
     <p class="section-subtitle">Yritys keskittyy sähköasennuksiin sekä ilmalämpöpumppujen myyntiin, asennukseen ja huoltoon.</p>
     <div class="services services-2">
       <a href="palvelut.html" class="service-card">
-        <span class="service-icon">⚡</span>
+        <span class="service-icon"><img src="salama.png" alt=""></span>
         <h3>Sähköasennukset</h3>
         <p>Sähköasennukset kotitalouksille, yrityksille ja taloyhtiöihin.</p>
       </a>
       <a href="palvelut.html" class="service-card">
-        <span class="service-icon">❄</span>
+        <span class="service-icon"><img src="lumi.png" alt=""></span>
         <h3>Ilmalämpöpumput</h3>
         <p>Toshiba- ja Panasonic-ilmalämpöpumppujen myynti ja asennus avaimet käteen -periaatteella.</p>
       </a>
